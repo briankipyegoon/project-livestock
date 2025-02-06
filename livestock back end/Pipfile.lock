@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "5ca9ce46129bb61f69fb447bd519f59cb550fdc0c7cbcd5e6fa795fb1a7579e3"
+            "sha256": "17f52c386d7c4144b71ba577633ec3da47e329c7b58344187041d02d5776c32b"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3"
+            "python_version": "3.8.10"
         },
         "sources": [
             {
@@ -200,7 +200,7 @@
                 "sha256:02a89390c1e15fdfdc0d7c6b25cb3e62650d0494005c97d6f148bf5b9787525e",
                 "sha256:310b41d755445d74569f993ccfc22838295d9fe005425094fad953d7f15c8580"
             ],
-            "markers": "python_version < '3.9'",
+            "markers": "python_version < '3.10'",
             "version": "==8.6.1"
         },
         "importlib-resources": {
@@ -313,6 +313,13 @@
             ],
             "index": "pypi",
             "version": "==1.4.0"
+        },
+        "migrate": {
+            "hashes": [
+                "sha256:5cca9d963f75b65b97e3e13456cbeecb7012610b1d515ce254daeb5be9d4b7e7"
+            ],
+            "index": "pypi",
+            "version": "==0.3.8"
         },
         "packaging": {
             "hashes": [

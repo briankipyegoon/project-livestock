@@ -61,9 +61,6 @@ def create_app():
     from routes.livestock_routes import livestock_bp
    
 
-    app.register_blueprint(user_routes)
-    app.register_blueprint(farmer_routes)
-    app.register_blueprint(broker_routes)
-    app.register_blueprint(livestock_bp, url_prefix="")
+
    
     return app

@@ -5,7 +5,7 @@ from flask_jwt_extended import (
 )
 from werkzeug.security import generate_password_hash, check_password_hash
 from config.config import create_app,db
-from models.models import User, Farmer, Supplier
+from models.models import User, Farmer, broker
 from schemas.schemas import (
     user_schema, users_schema
 )

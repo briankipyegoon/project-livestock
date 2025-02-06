@@ -15,8 +15,9 @@ python-dotenv = "*"
 marshmallow = "*"
 bcrypt = "*"
 flask-jwt-extended = "*"
+migrate = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3"
+python_version = "3.8.10"

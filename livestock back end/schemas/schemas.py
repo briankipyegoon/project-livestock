@@ -1,6 +1,7 @@
 from config.config import ma
 from models.models import User, Farmer, broker, livestock
 from marshmallow import validates, ValidationError, fields, validate
+from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 
 class UserSchema(ma.SQLAlchemyAutoSchema):
     class Meta:
@@ -14,7 +15,7 @@ class UserSchema(ma.SQLAlchemyAutoSchema):
     
     # Add nested relationships with proper exclusions
     farmer = ma.Nested('FarmerSchema', exclude=("user",))
-    supplier = ma.Nested('brokerSchema', exclude=("user",))
+    broker = ma.Nested('brokerSchema', exclude=("user",))
 
     @validates('email')
     def validate_email(self, email):

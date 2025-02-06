@@ -21,7 +21,7 @@ class User(db.Model):
 
     farmer = db.relationship("Farmer", back_populates="user", uselist=False, 
                            cascade="all, delete-orphan")
-    supplier = db.relationship("Supplier", back_populates="user", uselist=False,
+    broker = db.relationship("broker", back_populates="user", uselist=False,
                              cascade="all, delete-orphan")
 
     @property
@@ -101,7 +101,7 @@ class Farmer(db.Model):
     created_at = db.Column(db.DateTime, nullable=False, server_default=db.func.now())
  
     user = db.relationship("User", back_populates="farmer")
-    products = db.relationship("Product", back_populates="farmer", cascade="all, delete-orphan")
+    livestock = db.relationship("livestock", back_populates="farmer", cascade="all, delete-orphan")
 
     def soft_delete(self):
         """Soft delete the farmer"""
