@@ -1,15 +1,8 @@
-from flask import Blueprint
-from routes.livestock_routes import livestock_routes
-from routes.farmer_routes import farmer_routes
-from routes.broker_routes import broker_routes
-from routes.auth_routes import auth_routes
+from .user_routes import user_routes
+from .farmer_routes import farmer_routes
+from .broker_routes import broker_routes
+from config.config import create_app
 
-# Initialize blueprints
-def init_routes(app):
-    # Register blueprints with their URL prefixes
-    app.register_blueprint(auth_routes, url_prefix='/api/auth')
-    app.register_blueprint(livestock_routes, url_prefix='/api')
-    app.register_blueprint(farmer_routes, url_prefix='/api')
-    app.register_blueprint(broker_routes, url_prefix='/api')
+app = create_app()
 
-    return app
+__all__ = ["user_routes", "farmer_routes", "broker_routes"]
